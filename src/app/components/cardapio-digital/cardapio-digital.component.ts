@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./cardapio-digital.component.scss']
 })
 export class CardapioDigitalComponent {
-
+  voltar() {
+    window.location.href = '/link'
+  }
 }
