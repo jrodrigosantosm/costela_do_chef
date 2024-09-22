@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LinkBioComponent } from './components/link-bio/link-bio.component';
+import { CardapioDigitalComponent } from './components/cardapio-digital/cardapio-digital.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LinkBioComponent
+    LinkBioComponent,
+    CardapioDigitalComponent
   ],
   imports: [
     BrowserModule,

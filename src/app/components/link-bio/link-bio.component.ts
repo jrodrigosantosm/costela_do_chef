@@ -11,6 +11,6 @@ export class LinkBioComponent {
   }
 
   cardapio() {
-    window.location.href = 'https://drive.google.com/file/d/1n4YrG3745GAihuPPYZVtcEJVq9KqSWr1/view?usp=sharing';
+    window.location.href = '/cardapio';
   }
 }

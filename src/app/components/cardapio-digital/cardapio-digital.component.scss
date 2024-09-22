@@ -1,0 +1,18 @@
+img {
+  width: 100%;
+}
+
+button {
+  bottom: 0;
+  margin: 5px;
+  position: fixed;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #ff6a00;
+
+  img {
+    max-width: 15px;
+  }
+}
