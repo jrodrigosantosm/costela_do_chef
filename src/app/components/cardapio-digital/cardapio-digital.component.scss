@@ -1,5 +1,7 @@
 img {
   width: 100%;
+  margin: 0 auto;
+  max-height: 900px;
 }
 
 button {
@@ -14,7 +16,11 @@ button {
 
   img {
     max-width: 15px;
-    margin: 0 auto;
-    max-height: 900px;
+  }
+}
+
+@media (min-width: 1000px) {
+  img {
+    width: auto;
   }
 }
