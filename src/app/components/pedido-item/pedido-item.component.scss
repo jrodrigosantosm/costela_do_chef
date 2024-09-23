@@ -1,0 +1,53 @@
+.descricao {
+  font-size: 11px;
+}
+
+.preco {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logo {
+  background: linear-gradient(to right, #ff6a00, #ffb347 50%, #ff6a00);
+  border-radius: 1000px;
+
+  img {
+    max-width: 50px;
+    padding: calc(10%);
+  }
+}
+
+.aberto {
+  color: greenyellow !important;
+}
+
+.funcionamento {
+  background-color: rgba(240, 248, 255, 0.8);
+  width: fit-content;
+  border-radius: 8px;
+  position: absolute;
+  right: 0;
+  left: 75%;
+  top: 21%;
+}
+
+.btn-adicionar {
+  background-color: black;
+  color: aliceblue;
+  width: fit-content;
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: rgba(240, 248, 255, 0.8);
+}
+
+.imagem-produto {
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+}

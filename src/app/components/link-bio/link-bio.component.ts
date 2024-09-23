@@ -13,4 +13,8 @@ export class LinkBioComponent {
   cardapio() {
     window.location.href = '/cardapio';
   }
+
+  pedido() {
+    window.location.href = '/pedido';
+  }
 }
