@@ -1,31 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Produto } from 'src/app/models/Produto.model';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-pedido-item',
   templateUrl: './pedido-item.component.html',
   styleUrls: ['./pedido-item.component.scss']
 })
-export class PedidoItemComponent {
-  banner = "assets/image/banner-teste.jpg"
-  produtos = [
-    {
-      titulo: 'Produto 1',
-      descricao: 'Este é o primeiro produto com texto descritivo.',
-      imagem: 'assets/image/produto-teste.jpg',
-      preco: '9.99'
-    },
-    {
-      titulo: 'Produto 2',
-      descricao: 'Este é o segundo produto com texto descritivo.',
-      imagem: 'assets/image/produto-teste.jpg',
-      preco: '9.99'
+export class PedidoItemComponent implements OnInit {
+  public produtos: Produto[] = [];  // Correção: array de Produto
 
-    },
-    {
-      titulo: 'Produto 3',
-      descricao: 'Este é o terceiro produto com texto descritivo.',
-      imagem: 'assets/image/produto-teste.jpg',
-      preco: '9.99'
-    }
-  ];
+  constructor(
+    private produtoService: ProdutoService
+  ) { }
+
+  ngOnInit(): void {
+    this.getProdutos();
+  }
+
+  banner = "assets/image/banner-teste.jpg";
+
+  adicionarCarrinho(produto: Produto) {  // Correção: Produto ao invés de object
+    console.log('adicionado', produto);
+  }
+
+  getProdutos() {
+    this.produtoService.getProdutos().subscribe({
+      next: (response: Produto[]) => {  // Correção: respose -> response e tipo de resposta Produto[]
+        this.produtos = response;
+        console.log(response);
+      }
+    });
+  }
 }

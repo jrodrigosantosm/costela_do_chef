@@ -16,15 +16,16 @@
   <div *ngFor="let produto of produtos" class="card col-12 mb-1" style="max-width: 900px;">
     <div class="row">
       <div class="col-4 d-flex align-items-center">
-        <img [src]="produto.imagem" class="img-fluid rounded-start imagem-produto" alt="{{ produto.titulo }}">
+        <img [src]="produto.ds_imagem" class="img-fluid rounded-start imagem-produto" alt="{{ produto.ds_nome }}">
       </div>
       <div class="col-8 p-0 m-0 pr-2">
         <div class="card-body m-0 d-flex flex-column justify-content-between h-100 w-100">
-          <p class="card-title m-0">{{ produto.titulo }}</p>
-          <p class="card-text m-0 descricao">{{ produto.descricao }}</p>
+          <p class="card-title m-0">{{ produto.ds_nome }}</p>
+          <p class="card-text m-0 descricao">{{ produto.ds_descricao
+            }}</p>
           <div class="d-flex justify-content-between">
-            <p class="preco m-0">R$: {{ produto.preco }}</p>
-            <button class="btn-adicionar">
+            <p class="preco m-0">R$: {{ produto.nu_preco }}</p>
+            <button (click)="adicionarCarrinho(produto)" class="btn-adicionar">
               <span class="material-symbols-outlined ">add</span>
             </button>
           </div>
